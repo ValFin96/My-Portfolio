@@ -7,6 +7,7 @@
     --margin-left: 10px;
     --font-family: Georgia, 'Times New Roman', Times, serif;
 }
+/* Element Styling */
 body{
     background:linear-gradient(
         90deg,
@@ -61,7 +62,7 @@ padding: var(--padding-block);
 display:flex;
 width: 100%;
 }
-
+/* Class Elements Styling */
 .background-image{
     height: 250px;
     width: 100%;
@@ -72,7 +73,6 @@ width: 100%;
 .content{
     display:flex;
     flex-direction: column;
-    margin-left: 90px;
     width: 90%;
     text-align:justify;
  /* The About Me section styling */
@@ -94,7 +94,6 @@ h3{
     top: 300px;
     right: 53px;
     font-size: 25px;
-    animation: flicker 1.5s infinite alternate;
     color: #fff;
     text-shadow:
       0 0 7px #fff,
@@ -106,8 +105,7 @@ h3{
       0 0 100px pink,
       0 0 150px pink;
 }
-    
-
+/* Styling of the work images section */
 .grid{
     padding: var(--padding-div);
     width: 80%;
@@ -141,7 +139,7 @@ figcaption{
     background-color: #fff;
     border: 1px solid transparent;
 }
-/* Styling of the footer */
+/* Styling of the Contact Me */
 .contact{
     padding: var(--padding-block);
     width: 100%;
@@ -163,4 +161,86 @@ figcaption{
     font-family: var(--font-family);
 }
 
-
+/* Responsive styling */
+@media screen and (max-width:1050px){
+p{
+    font-size: 15px;
+}
+h2{
+    font-size: 25px;
+}
+nav{
+    font-size: 17px;
+}
+.contact-links{
+    font-size: 13px;
+    padding: 0 0 0 30px;
+}
+.descr{
+    padding: 0 0 0 30px;
+}
+.grid{
+    padding: 0 0 0 30px;
+}
+}
+@media screen and (max-width:800px){
+figcaption{
+    font-size: 15px;
+    width: 150px;
+}
+section{
+    display: inline-block;
+    padding:0;
+}
+h2{
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+.descr{
+    border: transparent;
+}
+.grid{
+    border: transparent;
+}
+.contact-links{
+    border:transparent;
+}
+nav ul{
+    font-size: 14px;
+}
+    
+.headers{
+    text-align: center;
+    width: 100%;
+}
+h1{
+    font-size: 25px;
+    width: 83px;
+    padding: 5px;
+}
+section{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-links{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    line-height: 1.5;
+}
+}
+@media screen and (max-width:600px){
+.grid{
+    display:flex;
+    flex-direction: column;
+}
+.contact-links{
+    padding:0;
+}
+h3{
+    font-size: 15px;
+}
+}
