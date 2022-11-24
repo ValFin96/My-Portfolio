@@ -1,4 +1,12 @@
-
+:root{
+    --gap: 40px;
+    --num-cols:2;
+    --row-height:300px; 
+    --padding-block: 60px 0px 60px 60px; 
+    --padding-div: 0px 10px 0px 150px;
+    --margin-left: 10px;
+    --font-family: Georgia, 'Times New Roman', Times, serif;
+}
 body{
     background:linear-gradient(
         90deg,
@@ -12,8 +20,8 @@ h1 {
     background-color:#DA22FF;
     color:#B24592;
     font-size: 35px;
-    margin-left: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    margin-left: var(--margin-left);
+    font-family: var (--font-family);
 }
 header{
     padding:30px;
@@ -27,12 +35,16 @@ nav{
     padding-top: 10px;
     margin-right: 30px;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     font-size: 20px;
+}
+p{
+    font-size: 20px;
+    font-family: var(--font-family);
 }
 ul {
     list-style-type: none;
-    margin-left: 10px;
+    margin-left: var(--margin-left);
 }
 
 li {
@@ -45,9 +57,9 @@ li:hover{
     cursor:pointer;
 }
 section{
-padding: 60px;
+padding: var(--padding-block);
 display:flex;
-margin: auto;
+width: 100%;
 }
 
 .background-image{
@@ -60,23 +72,27 @@ margin: auto;
 .content{
     display:flex;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 90px;
     width: 90%;
     text-align:justify;
  /* The About Me section styling */
 }
 .descr{
-    margin-left: 10px;
+    margin-left: var(--margin-left);
     border-left: 3px solid purple;
-    padding: 0px 10px 0px 150px;
+    padding: var(--padding-div);
+    width:80%;
+    line-height: 1.2;
 }
 h2{
-    font-size: 30px; 
+    font-size: 35px;
+    font-family: var(--font-family);
+    
 }
 h3{
-    position: relative;
-    top: 120px;
-    left: 1100px;
+    position: absolute;
+    top: 300px;
+    right: 53px;
     font-size: 25px;
     animation: flicker 1.5s infinite alternate;
     color: #fff;
@@ -93,28 +109,21 @@ h3{
     
 
 .grid{
-    --gap: 40px;
-    --num-cols:2;
-    --row-height:300px;
-    
-    box-sizing: border-box;
-    padding-left: 150px;
-    
-
+    padding: var(--padding-div);
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(var(--num-cols), 1fr);
     grid-auto-rows: var(--row-height);
     gap:var(--gap);
-    margin-left: 10px;
-    margin-right: 290px;
+    margin-left: var(--margin-left);
     border-left: 3px solid purple;
-    
 }
+
 .box > img {
 width:100%;
 height: 100%;
 object-fit: cover;
-filter:contrast(75%);
+filter:contrast(65%);
 }
 .box > img:hover{
     cursor:pointer;
@@ -132,17 +141,26 @@ figcaption{
     background-color: #fff;
     border: 1px solid transparent;
 }
+/* Styling of the footer */
 .contact{
+    padding: var(--padding-block);
+    width: 100%;
+    
+}
+
+.headers{
+    width: 14%;
+    text-align:right;
+}
+.contact-links{
     display: flex;
-    margin-left: 37px;
-    padding: 40px 0px 40px 0px;
-   
-}
-.footer{
+    justify-content: space-around;
+    width: 80%;
     border-left: 3px solid purple;
-    padding: 0px 10px 40px 150px;
+    margin-left: 10px;
+    padding:var(--padding-div);
     font-size: 20px;
+    font-family: var(--font-family);
 }
-.footer li{
-    padding-left:100px;
-}
+
+
